@@ -57,6 +57,7 @@
 - [ ] Cloudflare で `bluemoment.fyi` の **Auto Renew ON** を確認（Domain Registration → Manage）
 - [ ] Cloudflare アカウントの2FA（TOTP or セキュリティキー）とバックアップコード保管を確認
 - [ ] Cloudflare のログインメール確認。**`@bluemoment.fyi` には絶対に変えない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）。Proton契約後に `<name>@proton.me` へ変更するのが理想。当面はGmailのままでも可
+- [ ] **予備 YubiKey を購入**（推奨: Security Key C NFC＝FIDO2専用で安価、または 5C NFC＝TOTP/PIVも使う場合。Android でNFCが使えるNFC版を選ぶ。購入は Yubico 公式 or 正規代理店）。届いたら Tier 0（Bitwarden / Proton / Cloudflare / メインGoogle）に2本とも登録。Proton は届いてから2FA登録すると1回で済む
 - [ ] 支払いカードの有効期限をカレンダー登録（自動更新失敗＝メール全滅の最大要因）
 - [ ] （任意）`.fyi` は新しめのgTLD。まれにアドレス入力欄の検証で弾くサービスがある → 発生したら台帳に記録し `@proton.me` を使う
 - [ ] Proton アカウント作成（`<name>@proton.me`）→ Mail Plus 契約
