@@ -113,6 +113,12 @@
   - **このラベルに来たもの＝まだアドレス変更していないサービス** の作業リスト
 - [ ] 転送確認: 別アドレスから各 Gmail へ送り、Proton の `未移行` に入るか
 
+### P2 アカウント別の扱い（2026-11-14 決定）
+| 順 | アカウント | 転送先 | 過去メール | 最終形 |
+|---|---|---|---|---|
+| 1 | bm20（`bluemoment20@gmail.com`） | `legacy-bm20@` | 必要分だけ Easy Switch 取込 or Takeout | **アカウント削除** |
+| 2 | main（`bl5e44j@gmail.com`） | `legacy-main@`（恒久） | **Easy Switch で取込**（Promotions/Social/Spam除外）→ Gmail側削除 | アカウント存続・Gmailは空に近く |
+
 ## P3. サービスのメールアドレス変更（重要度順）
 
 | Tier | 対象 | 理由 | 時期 |
