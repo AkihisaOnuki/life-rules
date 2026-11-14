@@ -78,11 +78,11 @@
 | CNAME | `protonmail._domainkey` | 管理画面の値 | DKIM 1/3 |
 | CNAME | `protonmail2._domainkey` | 管理画面の値 | DKIM 2/3 |
 | CNAME | `protonmail3._domainkey` | 管理画面の値 | DKIM 3/3 |
-| TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@bluemoment.fyi` | 最初は監視のみ |
+| TXT | `_dmarc` | Proton 提示値（`v=DMARC1; p=quarantine`） | 新規ドメインで送信元は Proton のみのため監視フェーズ省略（2026-11-14 変更） |
 
 - Cloudflare DNS の場合、CNAME は **プロキシOFF（DNS only / グレー雲）**。オレンジ雲だと DKIM が壊れる。
 - TTL は作業中 300 秒、安定後 Auto/3600。
-- DMARC 段階導入: `p=none`（2〜4週、rua を確認）→ `p=quarantine` → 問題なければ `p=reject`。
+- DMARC: `p=quarantine` で開始 → 数か月問題なければ `p=reject`。
 
 事前確認（Cloudflare ダッシュボード → bluemoment.fyi → DNS / Email）:
 - [ ] **Cloudflare Email Routing が有効なら無効化**（`route1/2/3.mx.cloudflare.net` のMXとSPFを自動管理・ロックするため Proton の MX と競合する）
