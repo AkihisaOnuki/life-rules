@@ -139,6 +139,7 @@
 1サービスあたりの作業:
 1. [rules/email.md §2](../rules/email.md) の書式でアドレスを決める（catch-all なので Proton 側の作成は不要）
 2. サービスの設定でメール変更 → 確認メールが Proton に届くことを確認
+   - **ログイン用とは別の「請求・通知・連絡先」メール欄**も確認して変更（例: Cloudflare の Billing / Registrant）
 3. Bitwarden のエントリの「ユーザー名」を新アドレスに更新（これが対応表の正本）
 4. [inventory/services.md](../inventory/services.md) / [inventory/email-aliases.md](../inventory/email-aliases.md) に追記
 
