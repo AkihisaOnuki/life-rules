@@ -54,14 +54,14 @@
 ## P0. ドメイン確認・契約
 
 - [x] ドメイン取得: `bluemoment.fyi`（Cloudflare Registrar）
-- [ ] Cloudflare で `bluemoment.fyi` の **Auto Renew ON** を確認（Domain Registration → Manage）
+- [x] Cloudflare で `bluemoment.fyi` の **Auto Renew ON** を確認（Domain Registration → Manage）
 - [ ] Cloudflare アカウントの2FA（TOTP or セキュリティキー）とバックアップコード保管を確認
 - [ ] Cloudflare のログインメールを `bluemoment20@gmail.com` → **メインGoogle `bl5e44j@gmail.com`** に変更。**`@bluemoment.fyi` には絶対にしない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）
 - [ ] 同じ理由で、Proton のリカバリー用メールも `@bluemoment.fyi` 以外（メインGoogle の Gmail）にする
 - [ ] **予備 YubiKey を購入**（推奨: Security Key C NFC＝FIDO2専用で安価、または 5C NFC＝TOTP/PIVも使う場合。Android でNFCが使えるNFC版を選ぶ。購入は Yubico 公式 or 正規代理店）。届いたら Tier 0（Bitwarden / Proton / Cloudflare / メインGoogle）に2本とも登録。Proton は届いてから2FA登録すると1回で済む
 - [ ] 支払いカードの有効期限をカレンダー登録（自動更新失敗＝メール全滅の最大要因）
 - [ ] （任意）`.fyi` は新しめのgTLD。まれにアドレス入力欄の検証で弾くサービスがある → 発生したら台帳に記録し `@proton.me` を使う
-- [ ] Proton アカウント作成（`<name>@proton.me`）→ Mail Plus 契約
+- [x] Proton アカウント作成（`<name>@proton.me`）→ Mail Plus 契約
   - Proton の2FAは **YubiKey（FIDO2）** を登録。リカバリーフレーズは紙で保管（Tier 0 のため Bitwarden の外。[rules/accounts.md §2.1](../rules/accounts.md)）
   - Proton のログイン情報自体は Bitwarden に登録
 
@@ -85,13 +85,13 @@
 - DMARC: `p=quarantine` で開始 → 数か月問題なければ `p=reject`。
 
 事前確認（Cloudflare ダッシュボード → bluemoment.fyi → DNS / Email）:
-- [ ] **Cloudflare Email Routing が有効なら無効化**（`route1/2/3.mx.cloudflare.net` のMXとSPFを自動管理・ロックするため Proton の MX と競合する）
-- [ ] 既存の MX / SPF（`v=spf1`で始まるTXT）/ `_dmarc` があれば控えてから削除・置換（SPFは1レコードのみ）
+- [x] **Cloudflare Email Routing が有効なら無効化**（`route1/2/3.mx.cloudflare.net` のMXとSPFを自動管理・ロックするため Proton の MX と競合する）
+- [x] 既存の MX / SPF（`v=spf1`で始まるTXT）/ `_dmarc` があれば控えてから削除・置換（SPFは1レコードのみ）
 
 手順:
-- [ ] TXT（verification）→ 検証通過
-- [ ] **MX を向ける前に** 送信が必要なアドレスを作成（`akihisa.onuki@`, `family-*@` など。上限10）
-- [ ] MX / SPF / DKIM / DMARC 投入 → 管理画面で全て緑
+- [x] TXT（verification）→ 検証通過
+- [x] **MX を向ける前に** 送信が必要なアドレスを作成（`akihisa.onuki@`, `family-*@` など。上限10）
+- [x] MX / SPF / DKIM / DMARC 投入 → 管理画面で全て緑
 - [ ] catch-all を ON（Settings → Domain names → Actions → Set catch-all、宛先 `akihisa.onuki@`）
 - [ ] Sieve で既定拒否リスト設定（`info@`, `admin@`, `postmaster@` 以外の汎用名など）
 - [ ] 疎通テスト
