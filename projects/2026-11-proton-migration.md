@@ -58,7 +58,7 @@
 - [ ] Cloudflare アカウントの2FA（TOTP or セキュリティキー）とバックアップコード保管を確認
 - [x] Cloudflare のログインメールは `bl5e44j+dev@gmail.com`（変更済）。
 - [ ] （後回しOK）Cloudflare のログインメールを `bl5e44j+infra@gmail.com` に変更
-- **`@bluemoment.fyi` には絶対にしない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）
+  - **`@bluemoment.fyi` には絶対にしない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）
 - [ ] 同じ理由で、Proton のリカバリー用メールも `@bluemoment.fyi` 以外（メインGoogle の Gmail）にする
 - [ ] **予備 YubiKey を購入**（推奨: Security Key C NFC＝FIDO2専用で安価、または 5C NFC＝TOTP/PIVも使う場合。Android でNFCが使えるNFC版を選ぶ。購入は Yubico 公式 or 正規代理店）。届いたら Tier 0（Bitwarden / Proton / Cloudflare / メインGoogle）に2本とも登録。Proton は届いてから2FA登録すると1回で済む
 - [ ] 支払いカードの有効期限をカレンダー登録（自動更新失敗＝メール全滅の最大要因）
