@@ -10,7 +10,7 @@
 ## 2. 認証
 | 項目 | ルール |
 |---|---|
-| パスワード管理 | **Bitwarden**（Families プラン。勤務先 Enterprise の Families スポンサー枠）に全件登録。パスキーも Bitwarden に保存 |
+| パスワード管理 | **Bitwarden**（Families プラン。勤務先 Enterprise の Families スポンサー枠）に全件登録。パスキーも Bitwarden に保存してよい（[決定記録](../decisions/2026-11-14-passkeys-in-bitwarden.md)） |
 | 認証の要（ルート・オブ・トラスト） | **YubiKey 5C**（FIDO2/WebAuthn） |
 | 2FA 優先順位 | ① パスキー（Bitwarden or YubiKey） ② セキュリティキー（YubiKey） ③ TOTP ④ SMS（他に手段が無い場合のみ） |
 | TOTPの保管先 | 原則 Bitwarden の TOTP 欄。ただし **Bitwarden 自身・Proton・Cloudflare・メインGoogle の TOTP は Bitwarden に入れない**（下記 §2.1） |
