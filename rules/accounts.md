@@ -41,7 +41,8 @@
 ## 3. Googleアカウント一覧（現状）
 | アカウント（識別名） | 用途 | 状態 | 統合先 / 対応 |
 |---|---|---|---|
-| main | 主 | 存続 | - |
+| main（`bl5e44j@gmail.com`） | 主。Android/Play Console、Tier 0 のログイン/リカバリー用メール | 存続 | - |
+| `bluemoment20@gmail.com` | 旧Cloudflareログイン他（詳細TBD） | 整理対象 | Cloudflare は main へ変更予定 |
 | （例）sub-old | 旧用途 | 統合予定 | main へデータ移行後削除 |
 
 ※ アドレス全文を書くかは任意（privateリポジトリ前提）。
