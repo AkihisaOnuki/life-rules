@@ -17,6 +17,7 @@
 | ファイル・写真・メモはどこに置く？ | [rules/storage.md](rules/storage.md) |
 | 契約中サービスの一覧（どのアカウント/メールで登録したか） | [inventory/services.md](inventory/services.md) |
 | 発行済みメールエイリアスの台帳 | [inventory/email-aliases.md](inventory/email-aliases.md) |
+| 持っているドメインと用途 | [rules/domains.md](rules/domains.md), [inventory/domains.md](inventory/domains.md) |
 | 全体の原則・命名規則 | [rules/00-principles.md](rules/00-principles.md) |
 | 過去の決定とその理由 | [decisions/](decisions/) |
 | 進行中の移行・プロジェクト | [projects/](projects/)（例: [Proton移行](projects/2026-11-proton-migration.md)） |

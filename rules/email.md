@@ -8,19 +8,20 @@
 | 項目 | 値 |
 |---|---|
 | メールサービス | Proton Mail Plus（推奨・未契約） |
-| 独自ドメイン | `<domain>`（TBD、レジストラ: Cloudflare Registrar 推奨） |
+| 独自ドメイン | `bluemoment.fyi`（Cloudflare 取得済・DNSもCloudflare）。個人メール専用 |
 | 受信方式 | **catch-all 有効**（宛先 `me@`）。送信が必要なアドレスだけ個別作成（上限10） |
-| 主アドレス（人に教える用） | `me@<domain>` |
+| 主アドレス（人に教える用） | `me@bluemoment.fyi` |
 | Proton アカウントID | `<name>@proton.me`（レジストラ等の"ドメインに依存しない"登録先に使う） |
+| 使わないドメイン | `bluemoment.studio`（プロジェクトWeb用。個人のサービス登録に使わない。[domains.md](domains.md)） |
 | 旧Gmail | 移行完了まで転送で受信、新規登録には使わない |
 
 ## 2. アドレスの決め方
-- 書式: `<プレフィックス>-<サービス名>@<domain>`
-  - 例: `shop-amazon@<domain>`, `finance-sbi@<domain>`, `dev-github@<domain>`
+- 書式: `<プレフィックス>-<サービス名>@bluemoment.fyi`
+  - 例: `shop-amazon@bluemoment.fyi`, `finance-sbi@bluemoment.fyi`, `dev-github@bluemoment.fyi`
 - プレフィックスは [00-principles.md §3](00-principles.md) の一覧から選ぶ。
 - **1サービス1アドレス**。漏洩・スパム発生時はそのアドレスだけ無効化する。
 - 人に教えるアドレスは `me@` 系に限定する。
-- 使い捨ては `temp-<YYYYMM>-<用途>@<domain>`。
+- 使い捨ては `temp-<YYYYMM>-<用途>@bluemoment.fyi`。
 
 ## 3. 新規登録時の手順
 1. §2 の書式でアドレスを決める。

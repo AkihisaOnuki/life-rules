@@ -12,8 +12,8 @@
 | 項目 | 推奨 | 理由 |
 |---|---|---|
 | プラン | **Proton Mail Plus**（12か月） | 独自ドメイン1個 + catch-all で受信アドレスは実質無制限。最安。 |
-| ドメイン | `.com` 等のメジャーTLDを1つ（短い・綴りを口頭で伝えやすい） | `.xyz` 等の格安TLDは迷惑判定・登録拒否されやすい |
-| レジストラ | Cloudflare Registrar（原価・更新価格が上がらない・DNSも同居） | 代替: Porkbun。国内なら お名前.com は更新時のオプション勧誘が多く非推奨 |
+| ドメイン | **`bluemoment.fyi`（取得済）** | 個人メール専用。`bluemoment.studio` はプロジェクトWeb用で混ぜない（[rules/domains.md](../rules/domains.md)） |
+| レジストラ / DNS | **Cloudflare（取得済）** | 原価更新・DNS同居。そのまま使う |
 | 受信方式 | **catch-all ON** + 送信が必要なアドレスだけ個別作成 | Mail Plus の個別アドレス上限（10）を「送信用」にだけ使う |
 | 大量の使い捨て | catch-all で `temp-...@` を即興で使う | Proton Pass の hide-my-email は Mail Plus だと10個まで |
 
@@ -27,7 +27,7 @@
 
 - 2026-11 は Black Friday 割引（50% off 表示）中。**初年度だけ安く、更新価格は別**。年額で比較すること。
 - Unlimited に上げる判断基準: Drive（500GB）/ VPN / Pass の無制限エイリアスを「全部使う」なら。メールだけなら Mail Plus で十分。
-- `+` サブアドレス（`me+xxx@<domain>`）も全プランで使える。ただし移行動機が「`+`非対応サービス」なので主には使わない。
+- `+` サブアドレス（`me+xxx@bluemoment.fyi`）も全プランで使える。ただし移行動機が「`+`非対応サービス」なので主には使わない。
 
 ### Mail Plus + catch-all の要点（インフラ的に言うと）
 
@@ -51,14 +51,14 @@
 
 ---
 
-## P0. ドメイン取得・契約
+## P0. ドメイン確認・契約
 
-- [ ] ドメイン名を決める（候補を3つ。口頭で伝えて一発で通じるか家族で試す）
-- [ ] レジストラ アカウント作成
-  - ログインメールは **`<name>@proton.me`（独自ドメイン以外）**。循環依存回避（ドメイン死亡時にレジストラへ入れなくなる）
-  - 2FA: TOTP + 可能ならパスキー。リカバリーコードはパスワードマネージャへ
-- [ ] ドメイン取得: **自動更新ON・登録ロックON・WHOIS代理（プライバシー）ON**・可能なら複数年
+- [x] ドメイン取得: `bluemoment.fyi`（Cloudflare Registrar）
+- [ ] Cloudflare で `bluemoment.fyi` の **Auto Renew ON** を確認（Domain Registration → Manage）
+- [ ] Cloudflare アカウントの2FA（TOTP or セキュリティキー）とバックアップコード保管を確認
+- [ ] Cloudflare のログインメール確認。**`@bluemoment.fyi` には絶対に変えない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）。Proton契約後に `<name>@proton.me` へ変更するのが理想。当面はGmailのままでも可
 - [ ] 支払いカードの有効期限をカレンダー登録（自動更新失敗＝メール全滅の最大要因）
+- [ ] （任意）`.fyi` は新しめのgTLD。まれにアドレス入力欄の検証で弾くサービスがある → 発生したら台帳に記録し `@proton.me` を使う
 - [ ] Proton アカウント作成（`<name>@proton.me`）→ Mail Plus 契約
   - Proton の2FA・リカバリーフレーズを設定、パスワードマネージャへ保管
 
@@ -75,11 +75,15 @@
 | CNAME | `protonmail._domainkey` | 管理画面の値 | DKIM 1/3 |
 | CNAME | `protonmail2._domainkey` | 管理画面の値 | DKIM 2/3 |
 | CNAME | `protonmail3._domainkey` | 管理画面の値 | DKIM 3/3 |
-| TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@<domain>` | 最初は監視のみ |
+| TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:dmarc@bluemoment.fyi` | 最初は監視のみ |
 
 - Cloudflare DNS の場合、CNAME は **プロキシOFF（DNS only / グレー雲）**。オレンジ雲だと DKIM が壊れる。
 - TTL は作業中 300 秒、安定後 Auto/3600。
 - DMARC 段階導入: `p=none`（2〜4週、rua を確認）→ `p=quarantine` → 問題なければ `p=reject`。
+
+事前確認（Cloudflare ダッシュボード → bluemoment.fyi → DNS / Email）:
+- [ ] **Cloudflare Email Routing が有効なら無効化**（`route1/2/3.mx.cloudflare.net` のMXとSPFを自動管理・ロックするため Proton の MX と競合する）
+- [ ] 既存の MX / SPF（`v=spf1`で始まるTXT）/ `_dmarc` があれば控えてから削除・置換（SPFは1レコードのみ）
 
 手順:
 - [ ] TXT（verification）→ 検証通過
@@ -90,13 +94,13 @@
 - [ ] 疎通テスト
   - 外部（Gmail）→ `me@` / `適当な文字列@`（catch-all）に届くか
   - `me@` → Gmail に送信し、ヘッダで `spf=pass dkim=pass dmarc=pass` を確認
-  - `dig MX <domain>`, `dig TXT _dmarc.<domain>` で外部から見えるか
+  - `dig MX bluemoment.fyi`, `dig TXT _dmarc.bluemoment.fyi` で外部から見えるか
 - [ ] Proton のラベル/フォルダ・振り分けフィルタを作成（プレフィックス単位、[rules/email.md §4](../rules/email.md)）
 
 ## P2. Gmail 取込・並行運用開始
 
 - [ ] Proton **Easy Switch** で Gmail（残すアカウント分）の過去メールをインポート（必要なものだけ。全量不要なら直近数年）
-- [ ] 各 Gmail で **自動転送 → `me@<domain>`**（または移行元ごとに `legacy-<アカウント名>@<domain>` へ転送して出所を判別できるようにする。catch-all なので作成不要）
+- [ ] 各 Gmail で **自動転送 → `me@bluemoment.fyi`**（または移行元ごとに `legacy-<アカウント名>@bluemoment.fyi` へ転送して出所を判別できるようにする。catch-all なので作成不要）
   - 転送後の Gmail 側は「既読にしてアーカイブ」（削除しない＝保険）
 - [ ] Proton 側で `legacy-*` 宛を「未移行」ラベルに振り分け → **このラベルに来たもの＝まだアドレス変更していないサービス** の作業リストになる
 

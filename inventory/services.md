@@ -5,6 +5,7 @@
 | サービス | カテゴリ | ログインID（メール） | 認証 | 支払い | 状態 | 更新日 | メモ |
 |---|---|---|---|---|---|---|---|
 | Proton Mail | dev | TBD | TBD | TBD | 契約予定 | 2026-11-14 | メール基盤 |
+| Cloudflare | dev | TBD（`@bluemoment.fyi` 不可） | TBD | TBD | 利用中 | 2026-11-14 | レジストラ+DNS: bluemoment.fyi / bluemoment.studio |
 | GitHub | dev | TBD | TBD | 無料 | 利用中 | 2026-11-14 | このリポジトリ |
 
 - 状態: `利用中` / `移行中`（旧メール→新メール） / `解約予定` / `解約済`
