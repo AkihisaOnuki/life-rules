@@ -118,8 +118,10 @@
 ### P2 アカウント別の扱い（2026-11-14 決定）
 | 順 | アカウント | 転送先 | 過去メール | 最終形 |
 |---|---|---|---|---|
-| 1 | bm20（`bluemoment20@gmail.com`） | `legacy-bm20@` | 必要分だけ Easy Switch 取込 or Takeout | **アカウント削除** |
-| 2 | main（`bl5e44j@gmail.com`） | `legacy-main@`（恒久） | **Easy Switch で取込**（Promotions/Social/Spam除外）→ Gmail側削除 | アカウント存続・Gmailは空に近く |
+| 1 | bm20（`bluemoment20@gmail.com`） | **Easy Switch の転送で設定済（2026-11-14）**。転送メールには Easy Switch が自動でラベルを付ける → これを `未移行` リストとして使う | Easy Switch で取込 | **アカウント削除** |
+| 2 | main（`bl5e44j@gmail.com`） | Easy Switch の転送（恒久） | **Easy Switch で取込**（Promotions/Social/Spam除外）→ Gmail側削除 | アカウント存続・Gmailは空に近く |
+
+- 手動転送より Easy Switch（Settings → Import via Easy Switch → Google）を優先。OAuthで転送設定・取込・ラベル付けまで自動。
 
 ## P3. サービスのメールアドレス変更（重要度順）
 
