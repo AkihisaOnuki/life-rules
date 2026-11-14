@@ -92,20 +92,26 @@
 - [x] TXT（verification）→ 検証通過
 - [x] **MX を向ける前に** 送信が必要なアドレスを作成（`akihisa.onuki@`, `family-*@` など。上限10）
 - [x] MX / SPF / DKIM / DMARC 投入 → 管理画面で全て緑
-- [ ] catch-all を ON（Settings → Domain names → Actions → Set catch-all、宛先 `akihisa.onuki@`）
+- [x] catch-all を ON（Settings → Domain names → Actions → Set catch-all、宛先 `akihisa.onuki@`）
 - [ ] Sieve で既定拒否リスト設定（`info@`, `admin@`, `postmaster@` 以外の汎用名など）
-- [ ] 疎通テスト
+- [x] 疎通テスト（2026-11-14 全項目OK）
   - 外部（Gmail）→ `akihisa.onuki@` / `適当な文字列@`（catch-all）に届くか
   - `akihisa.onuki@` → Gmail に送信し、ヘッダで `spf=pass dkim=pass dmarc=pass` を確認
   - `dig MX bluemoment.fyi`, `dig TXT _dmarc.bluemoment.fyi` で外部から見えるか
 - [ ] Proton のラベル/フォルダ・振り分けフィルタを作成（プレフィックス単位、[rules/email.md §4](../rules/email.md)）
 
-## P2. Gmail 取込・並行運用開始
+## P2. Gmail 転送・並行運用開始
 
-- [ ] Proton **Easy Switch** で Gmail（残すアカウント分）の過去メールをインポート（必要なものだけ。全量不要なら直近数年）
-- [ ] 各 Gmail で **自動転送 → `akihisa.onuki@bluemoment.fyi`**（または移行元ごとに `legacy-<アカウント名>@bluemoment.fyi` へ転送して出所を判別できるようにする。catch-all なので作成不要）
-  - 転送後の Gmail 側は「既読にしてアーカイブ」（削除しない＝保険）
-- [ ] Proton 側で `legacy-*` 宛を「未移行」ラベルに振り分け → **このラベルに来たもの＝まだアドレス変更していないサービス** の作業リストになる
+方針: **過去メールは移行しない**（Gmail を書庫として残す）。Easy Switch での取込は、そのGoogleアカウントを削除する時（P5）だけ実施。
+
+- [ ] 各 Gmail で自動転送を設定（アカウントごとに）
+  1. Gmail 設定 → 「メール転送と POP/IMAP」→「転送先アドレスを追加」→ `legacy-<識別名>@bluemoment.fyi`（catch-all なので作成不要）
+  2. 確認コードが Proton に届く → Gmail に入力
+  3. 「受信メールのコピーを転送して、Gmail のメールをアーカイブする」を選択 → 保存（削除はしない＝保険）
+- [ ] Proton でフィルタ作成: 条件「受信者（Recipient）に `@gmail.com` を含む」→ ラベル `未移行`
+  - 転送メールは To ヘッダが元の Gmail アドレスのまま残るため、これで判別できる（BCC系メルマガは漏れるが許容）
+  - **このラベルに来たもの＝まだアドレス変更していないサービス** の作業リスト
+- [ ] 転送確認: 別アドレスから各 Gmail へ送り、Proton の `未移行` に入るか
 
 ## P3. サービスのメールアドレス変更（重要度順）
 
