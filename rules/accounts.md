@@ -21,6 +21,8 @@
 - 対象: **Bitwarden / Proton / Cloudflare / メインGoogle**
 - ルール:
   - YubiKey を2FAに登録し、TOTP やリカバリーは Bitwarden の外に置く（Bitwarden が開けない時に詰むため）。
+  - YubiKey 登録済みなら、**利便用の追加2FA として Bitwarden パスキー / Windows Hello の登録も可**（2026-11-14）。Bitwarden 侵害時は元々全滅なので被害範囲は増えない。Windows Hello は登録PC専用・家族と共用しないWindowsアカウントに限る。
+  - 例外: **Bitwarden 自身の2FAに Bitwarden パスキーは不可**（自己参照）。
   - Bitwarden のマスターパスワードと 2FA リカバリーコードは紙で保管。
   - Tier 0 同士でログインメールを循環させない（例: Cloudflare のログインを `@bluemoment.fyi` にしない）。
 
