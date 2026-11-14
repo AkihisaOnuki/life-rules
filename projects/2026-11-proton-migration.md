@@ -58,6 +58,10 @@
 - [ ] Cloudflare アカウントの2FA（TOTP or セキュリティキー）とバックアップコード保管を確認
 - [x] Cloudflare のログインメールは `bl5e44j+dev@gmail.com`（変更済）。
 - [ ] （後回しOK）Cloudflare のログインメールを `bl5e44j+infra@gmail.com` に変更
+- [ ] **Cloudflare のログイン以外のメール** を `bl5e44j+infra@gmail.com` に変更（2026-11-14 発覚: 領収書が bm20 に届いた）
+  - Billing → 請求先/領収書の送付先メール
+  - Domain Registration → 各ドメインの **Registrant（登録者）連絡先メール**（bluemoment.fyi / bluemoment.studio）← 失効・移管通知が届く。最重要
+  - Notifications の送信先
   - **`@bluemoment.fyi` には絶対にしない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）
 - [ ] 同じ理由で、Proton のリカバリー用メールも `@bluemoment.fyi` 以外（メインGoogle の Gmail）にする
 - [ ] **予備 YubiKey を購入**（推奨: Security Key C NFC＝FIDO2専用で安価、または 5C NFC＝TOTP/PIVも使う場合。Android でNFCが使えるNFC版を選ぶ。購入は Yubico 公式 or 正規代理店）。届いたら Tier 0（Bitwarden / Proton / Cloudflare / メインGoogle）に2本とも登録。Proton は届いてから2FA登録すると1回で済む
