@@ -26,5 +26,5 @@
 - `bluemoment.studio` が該当（2026-11-14 時点で送受信予定なし）。
 
 ## 4. プロジェクト用の連絡先が必要になったら
-- 受信のみ: Cloudflare Email Routing で `contact@bluemoment.studio` → `me@bluemoment.fyi` に転送（無料）。§3 の Null MX は外し、SPF/DMARCは Email Routing の指示に合わせる。
+- 受信のみ: Cloudflare Email Routing で `contact@bluemoment.studio` → `akihisa.onuki@bluemoment.fyi` に転送（無料）。§3 の Null MX は外し、SPF/DMARCは Email Routing の指示に合わせる。
 - 送信も必要: Proton Unlimited（独自ドメイン3つ）に上げて Proton に追加。

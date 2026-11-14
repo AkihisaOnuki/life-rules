@@ -27,11 +27,11 @@
 
 - 2026-11 は Black Friday 割引（50% off 表示）中。**初年度だけ安く、更新価格は別**。年額で比較すること。
 - Unlimited に上げる判断基準: Drive（500GB）/ VPN / Pass の無制限エイリアスを「全部使う」なら。メールだけなら Mail Plus で十分。
-- `+` サブアドレス（`me+xxx@bluemoment.fyi`）も全プランで使える。ただし移行動機が「`+`非対応サービス」なので主には使わない。
+- `+` サブアドレス（`akihisa.onuki+xxx@bluemoment.fyi`）も全プランで使える。ただし移行動機が「`+`非対応サービス」なので主には使わない。
 
 ### Mail Plus + catch-all の要点（インフラ的に言うと）
 
-- catch-all = **デフォルトルート**。個別アドレス = **静的ルート（ロンゲストマッチ優先）**。個別に作ったアドレスが優先され、それ以外は全部 catch-all 宛先（`me@`）のメールボックスに落ちる。
+- catch-all = **デフォルトルート**。個別アドレス = **静的ルート（ロンゲストマッチ優先）**。個別に作ったアドレスが優先され、それ以外は全部 catch-all 宛先（`akihisa.onuki@`）のメールボックスに落ちる。
 - **受信は無制限、送信は個別作成したアドレスのみ**。`shop-amazon@` から返信したくなったら、その時点でアドレスを作る（10枠の範囲で）。
 - 漏洩・スパム化したアドレスの遮断は **Sieve フィルタで reject/削除**（＝ACL で deny）。個別アドレスとして作成→無効化でも止められる可能性があるが、挙動は要検証。
 - リスク: 辞書攻撃的なスパム（`info@`, `admin@` 等）も全部受ける → `info|admin|contact|support|sales|noreply` などは Sieve で既定拒否。
@@ -90,20 +90,20 @@
 
 手順:
 - [ ] TXT（verification）→ 検証通過
-- [ ] **MX を向ける前に** 送信が必要なアドレスを作成（`me@`, `family-*@` など。上限10）
+- [ ] **MX を向ける前に** 送信が必要なアドレスを作成（`akihisa.onuki@`, `family-*@` など。上限10）
 - [ ] MX / SPF / DKIM / DMARC 投入 → 管理画面で全て緑
-- [ ] catch-all を ON（Settings → Domain names → Actions → Set catch-all、宛先 `me@`）
+- [ ] catch-all を ON（Settings → Domain names → Actions → Set catch-all、宛先 `akihisa.onuki@`）
 - [ ] Sieve で既定拒否リスト設定（`info@`, `admin@`, `postmaster@` 以外の汎用名など）
 - [ ] 疎通テスト
-  - 外部（Gmail）→ `me@` / `適当な文字列@`（catch-all）に届くか
-  - `me@` → Gmail に送信し、ヘッダで `spf=pass dkim=pass dmarc=pass` を確認
+  - 外部（Gmail）→ `akihisa.onuki@` / `適当な文字列@`（catch-all）に届くか
+  - `akihisa.onuki@` → Gmail に送信し、ヘッダで `spf=pass dkim=pass dmarc=pass` を確認
   - `dig MX bluemoment.fyi`, `dig TXT _dmarc.bluemoment.fyi` で外部から見えるか
 - [ ] Proton のラベル/フォルダ・振り分けフィルタを作成（プレフィックス単位、[rules/email.md §4](../rules/email.md)）
 
 ## P2. Gmail 取込・並行運用開始
 
 - [ ] Proton **Easy Switch** で Gmail（残すアカウント分）の過去メールをインポート（必要なものだけ。全量不要なら直近数年）
-- [ ] 各 Gmail で **自動転送 → `me@bluemoment.fyi`**（または移行元ごとに `legacy-<アカウント名>@bluemoment.fyi` へ転送して出所を判別できるようにする。catch-all なので作成不要）
+- [ ] 各 Gmail で **自動転送 → `akihisa.onuki@bluemoment.fyi`**（または移行元ごとに `legacy-<アカウント名>@bluemoment.fyi` へ転送して出所を判別できるようにする。catch-all なので作成不要）
   - 転送後の Gmail 側は「既読にしてアーカイブ」（削除しない＝保険）
 - [ ] Proton 側で `legacy-*` 宛を「未移行」ラベルに振り分け → **このラベルに来たもの＝まだアドレス変更していないサービス** の作業リストになる
 

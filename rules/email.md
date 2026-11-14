@@ -9,8 +9,8 @@
 |---|---|
 | メールサービス | Proton Mail Plus（推奨・未契約） |
 | 独自ドメイン | `bluemoment.fyi`（Cloudflare 取得済・DNSもCloudflare）。個人メール専用 |
-| 受信方式 | **catch-all 有効**（宛先 `me@`）。送信が必要なアドレスだけ個別作成（上限10） |
-| 主アドレス（人に教える用） | `me@bluemoment.fyi` |
+| 受信方式 | **catch-all 有効**（宛先 `akihisa.onuki@`）。送信が必要なアドレスだけ個別作成（上限10） |
+| 主アドレス（人に教える用） | `akihisa.onuki@bluemoment.fyi` |
 | Proton アカウントID | `<name>@proton.me` |
 | Tier 0 のログイン/リカバリー用メール | **メインGoogle `bl5e44j@gmail.com`**（Cloudflare・Proton リカバリー等、`bluemoment.fyi` が死んだ時に必要なものはこちら） |
 | 使わないドメイン | `bluemoment.studio`（プロジェクトWeb用。個人のサービス登録に使わない。[domains.md](domains.md)） |
@@ -21,7 +21,7 @@
   - 例: `shop-amazon@bluemoment.fyi`, `finance-sbi@bluemoment.fyi`, `dev-github@bluemoment.fyi`
 - プレフィックスは [00-principles.md §3](00-principles.md) の一覧から選ぶ。
 - **1サービス1アドレス**。漏洩・スパム発生時はそのアドレスだけ無効化する。
-- 人に教えるアドレスは `me@` 系に限定する。
+- 人に教えるアドレスは `akihisa.onuki@bluemoment.fyi` に限定する（catch-all 宛先を兼ねる）。
 - 使い捨ては `temp-<YYYYMM>-<用途>@bluemoment.fyi`。
 
 ## 3. 新規登録時の手順
