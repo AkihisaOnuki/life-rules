@@ -60,7 +60,8 @@
 - [ ] 支払いカードの有効期限をカレンダー登録（自動更新失敗＝メール全滅の最大要因）
 - [ ] （任意）`.fyi` は新しめのgTLD。まれにアドレス入力欄の検証で弾くサービスがある → 発生したら台帳に記録し `@proton.me` を使う
 - [ ] Proton アカウント作成（`<name>@proton.me`）→ Mail Plus 契約
-  - Proton の2FA・リカバリーフレーズを設定、パスワードマネージャへ保管
+  - Proton の2FAは **YubiKey（FIDO2）** を登録。リカバリーフレーズは紙で保管（Tier 0 のため Bitwarden の外。[rules/accounts.md §2.1](../rules/accounts.md)）
+  - Proton のログイン情報自体は Bitwarden に登録
 
 ## P1. DNS設定・アドレス作成
 
@@ -116,7 +117,7 @@
 1サービスあたりの作業:
 1. [rules/email.md §2](../rules/email.md) の書式でアドレスを決める（catch-all なので Proton 側の作成は不要）
 2. サービスの設定でメール変更 → 確認メールが Proton に届くことを確認
-3. パスワードマネージャのエントリの「ユーザー名/メール」を更新
+3. Bitwarden のエントリの「ユーザー名」を新アドレスに更新（これが対応表の正本）
 4. [inventory/services.md](../inventory/services.md) / [inventory/email-aliases.md](../inventory/email-aliases.md) に追記
 
 注意:
