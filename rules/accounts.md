@@ -44,7 +44,7 @@
 | アカウント（識別名） | 用途 | 状態 | 統合先 / 対応 |
 |---|---|---|---|
 | main（`bl5e44j@gmail.com`） | 主。Android/Play Console、Tier 0 のログイン/リカバリー用メール | 存続（メールは整理） | 過去メールは Easy Switch で Proton へ取込→Gmail側は削除して軽量化。転送 `legacy-main@` は恒久 |
-| bm20（`bluemoment20@gmail.com`） | 旧Cloudflareログイン他（詳細TBD） | **削除予定** | 転送 `legacy-bm20@` → 全サービス変更 → `未移行` に3か月来なければ §4 チェック後に削除 |
+| bm20（`bluemoment20@gmail.com`） | 用途TBD（Cloudflare は移行済） | **削除予定** | 転送 `legacy-bm20@` → 全サービス変更 → `未移行` に3か月来なければ §4 チェック後に削除 |
 | （例）sub-old | 旧用途 | 統合予定 | main へデータ移行後削除 |
 
 ※ アドレス全文を書くかは任意（privateリポジトリ前提）。
