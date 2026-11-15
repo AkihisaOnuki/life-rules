@@ -1,7 +1,7 @@
-# Claude プロジェクト再構築キット
+# Claude プロジェクト再構築: 私の人生設計
 
 新しい Claude アカウント（または新プロジェクト）で「私の人生設計」プロジェクトを同じ状態に戻すための手順。
-移行計画: [projects/2026-11-claude-account-migration.md](../projects/2026-11-claude-account-migration.md)
+移行計画: [projects/2026-11-claude-account-migration.md](../../projects/2026-11-claude-account-migration.md)
 
 ## 1. プロジェクト作成
 - 名前: `私の人生設計`
@@ -26,7 +26,7 @@
 ## 3. 最初のメッセージ（メモリの種まき。そのまま送る）
 
 ```text
-life-rules リポジトリの CLAUDE.md、README.md、setup/claude-project-setup.md を読んで、
+life-rules リポジトリの CLAUDE.md、README.md、setup/claude-projects/jinsei-sekkei.md を読んで、
 このプロジェクトの前提をプロジェクトメモリに保存して。
 特に「AIへの申し送り」と、projects/ の進行中タスクを把握して、次にやることを教えて。
 ```
