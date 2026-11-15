@@ -181,9 +181,11 @@
 ## Tier 0 強化（2026-11-15 追加。サービス移行より優先）
 
 ### Bitwarden（最重要）
-- [ ] ログインメールを `bl5e44j+infra@gmail.com` に（`@bluemoment.fyi` 不可）
+- [x] ログインメール `bl5e44j+infra@gmail.com`（2026-11-15 確認）
+- [x] パスキーログイン: YubiKey / Pixel 9a / Windows Hello（2026-11-15 確認）
+  - Pixel 9a のパスキーが Google パスワードマネージャ同期なら、メインGoogle の安全性が Bitwarden の安全性に直結する → Google 強化を急ぐ
 - [ ] スポンサー Families が **個人アカウント** に紐付いていることを確認（会社アカウントと混ざっていないか）
-- [ ] 2FA: YubiKey（FIDO2）登録。2FAリカバリーコードを紙で保管
+- [ ] 2段階ログイン（マスターパスワードでのログイン用）: YubiKey（FIDO2）が有効か確認。2FAリカバリーコードを紙で保管
 - [ ] マスターパスワードを紙で保管（Tier 0 の紙と同じ場所）
 - [ ] **Emergency Access**: 妻を緊急連絡先に（種類: Takeover、待機日数 7日 目安）
 - [ ] 暗号化エクスポート（パスワード保護 JSON）を USB に保存して金庫へ。年1回更新（1月の棚卸し時）
