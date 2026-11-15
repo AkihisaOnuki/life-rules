@@ -47,7 +47,7 @@
 | アカウント（識別名） | 用途 | 状態 | 統合先 / 対応 |
 |---|---|---|---|
 | main（`bl5e44j@gmail.com`） | 主。Android/Play Console、Tier 0 のログイン/リカバリー用メール | 存続 | **転送・取込はしない**（2026-11-15）。役割＝Google/Android＋インフラ系ログイン（`+infra`）＋過去メール書庫。一般サービスは個別に Proton へ移す |
-| bm20（`bluemoment20@gmail.com`） | Claude.ai ログイン（変更不可）他。Cloudflare は移行済 | **削除予定 → 保留**（Claude の扱い次第） | Easy Switch で転送（設定済） → 全サービス変更 → 転送ラベルに3か月来なければ §4 チェック後に削除 |
+| bm20（`bluemoment20@gmail.com`） | Claude.ai ログイン（変更不可）他。Cloudflare は移行済 | **削除予定**（Claude 新アカウント移行後） | Easy Switch で転送（設定済） → 全サービス変更 → 転送ラベルに3か月来なければ §4 チェック後に削除 |
 | （例）sub-old | 旧用途 | 統合予定 | main へデータ移行後削除 |
 
 ※ アドレス全文を書くかは任意（privateリポジトリ前提）。

@@ -7,7 +7,7 @@
 | Proton Mail | dev | `bl5e44j@proton.me` | PW+YubiKey(+Bitwardenパスキー/Windows Hello) | Mail Plus 12か月 | 利用中 | 2026-11-15 | メール基盤。Tier 0 |
 | Bitwarden | dev | `bl5e44j+infra@gmail.com` | パスキー（YubiKey/Pixel 9a/Windows Hello）+2段階ログイン | 勤務先スポンサー（Families） | 利用中 | 2026-11-14 | パスワード・パスキー管理。Tier 0 |
 | Cloudflare | dev | `bl5e44j+dev@gmail.com`（→ `+infra` へ変更予定。`@bluemoment.fyi` 不可） | PW+YubiKey/Bitwardenパスキー/Windows Hello | TBD | 利用中 | 2026-11-14 | レジストラ+DNS: bluemoment.fyi / bluemoment.studio |
-| Claude (claude.ai) | dev | `bluemoment20@gmail.com`（**メール変更不可**: 公式に未対応 2026-11-15 確認） | TBD | TBD | 利用中 | 2026-11-15 | このプロジェクト。bm20 削除の阻害要因 |
+| Claude (claude.ai) | dev | `bluemoment20@gmail.com`（**メール変更不可**: 公式に未対応 2026-11-15 確認） | TBD | TBD | 移行中 | 2026-11-15 | 新アカウントへ移行予定（[projects/2026-11-claude-account-migration.md](../projects/2026-11-claude-account-migration.md)） |
 | GitHub | dev | `bl5e44j+dev@gmail.com`（据え置き。開発基盤のため独自ドメインに依存させない） | パスキー（Bitwarden/YubiKey） | 無料 | 利用中 | 2026-11-15 | このリポジトリ（AkihisaOnuki/life-rules） |
 | ジブラルタ生命 | finance | `gibraltar@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-15 | 2026-11-15 メール変更済 |
 | Amazon | shop | `amazon@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-15 | 2026-11-15 メール変更済 |
