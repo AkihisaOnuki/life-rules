@@ -25,7 +25,9 @@
   - 例外: **Bitwarden 自身の2FAに Bitwarden パスキーは不可**（自己参照）。
   - Bitwarden のマスターパスワードと 2FA リカバリーコードは紙で保管。
   - Tier 0 同士でログインメールを循環させない（例: Cloudflare のログインを `@bluemoment.fyi` にしない）。
-  - 独自ドメインに依存させたくないインフラ系（レジストラ・DNS・Proton のリカバリー等）のログインメールは **`bl5e44j+infra@gmail.com`** に統一する（2026-11-14）。
+  - 独自ドメインに依存させたくないアカウントはメインGmailの `+` で分ける（独自ドメイン不可）:
+    - `bl5e44j+infra@gmail.com`: レジストラ・DNS・Bitwarden・Proton のリカバリー等（2026-11-14）
+    - `bl5e44j+dev@gmail.com`: 開発基盤（GitHub 等。このリポジトリがあるため）（2026-11-15）
 
 ### 2.2 YubiKey 運用
 - **YubiKey は2本体制にする**（1本は常用、1本は自宅保管の予備）。1本運用は単一障害点。紛失・故障で Tier 0 に入れなくなる。

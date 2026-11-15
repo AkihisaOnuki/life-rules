@@ -24,6 +24,14 @@
 - 人に教えるアドレスは `akihisa.onuki@bluemoment.fyi` に限定する（catch-all 宛先を兼ねる）。
 - 使い捨ては `temp-<YYYYMM>-<用途>@bluemoment.fyi`。
 
+## 2.5 独自ドメインを使わないもの
+- Tier 0・インフラ・開発基盤は `bluemoment.fyi` を使わず、メインGmailの `+infra` / `+dev` を使う（[accounts.md §2.1](accounts.md)）。
+  - 理由: ドメイン失効・Proton 障害時でも復旧経路を残すため。
+
+## 2.6 過去メールの扱い
+- 原則、過去メールは Gmail に残す（書庫）。サービスの注文履歴・領収書はサービス側で再取得できる。
+- どうしても Proton に置きたい場合: Gmail で `from:<送信元ドメイン>` のフィルタを作り既存メールにもラベル付与 → Easy Switch でそのラベルだけ取込（一回限り）。
+
 ## 3. 新規登録時の手順
 1. §2 の書式でアドレスを決める。
 2. catch-all なので Proton 側の作成は不要。**そのアドレスから送信/返信が必要な場合のみ** Proton でアドレスを個別作成。
