@@ -9,7 +9,7 @@
 ## 決定
 - bl5e44j は転送も取込もしない。
 - 役割を「Google/Android アカウント＋インフラ系ログイン（`+infra`）＋過去メール書庫」に限定する。
-- 一般サービスは P3 で1つずつ Proton（`<prefix>-<service>@bluemoment.fyi`）へ移し、Gmail の受信を自然に減らす。
+- 一般サービスは P3 で1つずつ Proton（`<service>@bluemoment.fyi`）へ移し、Gmail の受信を自然に減らす。
 
 ## 理由
 - Tier 0 の復旧経路を Proton から独立させる（[rules/accounts.md §2.1](../rules/accounts.md)）。

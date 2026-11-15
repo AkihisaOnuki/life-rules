@@ -11,10 +11,10 @@
 3. `inventory/` に1行追記する。
 
 ## 3. 命名規則（共通）
-- 小文字・ハイフン区切り（kebab-case）。例: `shop-amazon`, `finance-rakuten-bank`
-- 用途カテゴリ（プレフィックス）は以下で統一する。メール・フォルダ・タグ等で共通利用。
+- 小文字・ハイフン区切り（kebab-case）。例: `rakuten-bank`, `gibraltar`
+- 用途カテゴリは以下で統一する。台帳・フォルダ・ラベル・タグ等で共通利用（メールアドレスには入れない。[email.md §2](email.md)）。
 
-| プレフィックス | 用途 |
+| カテゴリ | 用途 |
 |---|---|
 | （なし） | 個人の主連絡先は `akihisa.onuki@bluemoment.fyi`（プレフィックス無し。[email.md](email.md)） |
 | `family` | 家族・保育園・行政 |

@@ -108,7 +108,7 @@
   - 外部（Gmail）→ `akihisa.onuki@` / `適当な文字列@`（catch-all）に届くか
   - `akihisa.onuki@` → Gmail に送信し、ヘッダで `spf=pass dkim=pass dmarc=pass` を確認
   - `dig MX bluemoment.fyi`, `dig TXT _dmarc.bluemoment.fyi` で外部から見えるか
-- [ ] Proton のラベル/フォルダ・振り分けフィルタを作成（プレフィックス単位、[rules/email.md §4](../rules/email.md)）
+- [ ] Proton のラベル/フォルダ・振り分けフィルタを作成（カテゴリ単位、[rules/email.md §4](../rules/email.md)）
 
 ## P2. Gmail 転送・並行運用開始
 

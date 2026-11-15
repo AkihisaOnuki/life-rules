@@ -17,9 +17,11 @@
 | 旧Gmail | 移行完了まで転送で受信、新規登録には使わない |
 
 ## 2. アドレスの決め方
-- 書式: `<プレフィックス>-<サービス名>@bluemoment.fyi`
-  - 例: `shop-amazon@bluemoment.fyi`, `finance-sbi@bluemoment.fyi`, `dev-github@bluemoment.fyi`
-- プレフィックスは [00-principles.md §3](00-principles.md) の一覧から選ぶ。
+- 書式: **`<サービス名>@bluemoment.fyi`**（プレフィックス無し。2026-11-15 変更、[決定記録](../decisions/2026-11-15-email-no-prefix.md)）
+  - 例: `gibraltar@bluemoment.fyi`, `sbi@bluemoment.fyi`, `rakuten-bank@bluemoment.fyi`
+  - サービス名は小文字・kebab-case。短く、そのサービスと一目で分かる名前にする。
+  - 例外（変更前に作成済）: `shop-amazon@bluemoment.fyi` はそのまま使う（再変更しない）。
+- カテゴリ（`finance`, `shop` 等）はアドレスに入れず、台帳の「カテゴリ」列と Proton のラベルで管理する。
 - **1サービス1アドレス**。漏洩・スパム発生時はそのアドレスだけ無効化する。
 - 人に教えるアドレスは `akihisa.onuki@bluemoment.fyi` に限定する（catch-all 宛先を兼ねる）。
 - 使い捨ては `temp-<YYYYMM>-<用途>@bluemoment.fyi`。
@@ -39,7 +41,8 @@
 4. [inventory/email-aliases.md](../inventory/email-aliases.md) と [inventory/services.md](../inventory/services.md) に追記。
 
 ## 4. フォルダ/ラベル
-- プレフィックス単位でラベル（`finance`, `shop` …）を作り、受信先アドレスでフィルタ振り分け。
+- カテゴリ単位でラベル（`finance`, `shop` …、[00-principles.md §3](00-principles.md)）を作る。
+- アドレスにカテゴリが無いため、振り分けは「受信者 = 個別アドレス」の条件をラベルごとに追加していく（重要カテゴリ `finance` / `family` のみで可。他はラベル無しで検索運用）。
 
 ## 4.5 遮断
 - 漏洩・スパム化したアドレスは Sieve フィルタで拒否し、台帳の状態を `無効化` にする。

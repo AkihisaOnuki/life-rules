@@ -41,7 +41,7 @@
 
 ### 2.4 Bitwarden のメール生成機能
 - Generator → Username → **Catch-all email** でドメイン `bluemoment.fyi` を指定するとランダムなアドレスを生成できる。
-- ただし命名規則は [email.md §2](email.md)（`<prefix>-<service>@`）を優先。ランダム生成は `temp` 用途のみ可。
+- ただし命名規則は [email.md §2](email.md)（`<service>@`）を優先。ランダム生成は `temp` 用途のみ可。
 
 ## 3. Googleアカウント一覧（現状）
 | アカウント（識別名） | 用途 | 状態 | 統合先 / 対応 |
