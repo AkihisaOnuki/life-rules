@@ -61,7 +61,9 @@
 - [ ] **Cloudflare のログイン以外のメール** を `bl5e44j+infra@gmail.com` に変更（2026-11-14 発覚: 領収書が bm20 に届いた）
   - [x] Billing → 請求先/領収書の送付先メール（2026-11-15）
   - [x] Domain Registration → デフォルト連絡先（2026-11-15）
-  - [ ] 既存ドメインごとの **Registrant 連絡先** も `+infra` になっているか確認（bluemoment.fyi / bluemoment.studio）← 失効・移管通知が届く。最重要
+  - 既存ドメインごとの連絡先（Registrant / Admin / Tech / Billing）を `+infra` に ← 失効・移管通知が届く。最重要
+    - [x] bluemoment.fyi（2026-11-15 反映済）
+    - [ ] bluemoment.studio（2026-11-15 確認メール承認済、反映待ち。翌日以降に再確認）
   - WHOIS は Cloudflare により秘匿（REDACTED）済み＝正常
   - [x] Notifications: アラート未使用のため対応不要
   - **`@bluemoment.fyi` には絶対にしない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）
