@@ -41,7 +41,9 @@
 
 ## 4. フォルダ/ラベル
 - カテゴリ単位でラベル（`finance`, `shop` …、[00-principles.md §3](00-principles.md)）を作る。
-- アドレスにカテゴリが無いため、振り分けは「受信者 = 個別アドレス」の条件をラベルごとに追加していく（重要カテゴリ `finance` / `family` のみで可。他はラベル無しで検索運用）。
+- **サービス単位のラベルは作らない**。アドレス自体が索引なので `to:amazon@bluemoment.fyi` で検索する。
+- ラベルは重要カテゴリのみ: `Finance`（銀行・証券・カード・保険）、`Family`（保育園・行政・家族）。
+- 振り分けは Sieve で管理し、正本は [config/proton/labels.sieve](../config/proton/labels.sieve)。finance/family のアドレスを追加したら Claude が更新 → Proton に貼り直す。
 
 ## 4.5 遮断
 - 漏洩・スパム化したアドレスは Sieve フィルタで拒否し、台帳の状態を `無効化` にする。
