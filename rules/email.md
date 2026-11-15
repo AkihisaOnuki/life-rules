@@ -11,7 +11,7 @@
 | 独自ドメイン | `bluemoment.fyi`（Cloudflare 取得済・DNSもCloudflare）。個人メール専用 |
 | 受信方式 | **catch-all 有効**（宛先 `akihisa.onuki@`）。送信が必要なアドレスだけ個別作成（上限10） |
 | 主アドレス（人に教える用） | `akihisa.onuki@bluemoment.fyi` |
-| Proton アカウントID | `<name>@proton.me` |
+| Proton アカウントID | `bl5e44j@proton.me` |
 | Tier 0 のログイン/リカバリー用メール | **メインGoogle `bl5e44j@gmail.com`**（Cloudflare・Proton リカバリー等、`bluemoment.fyi` が死んだ時に必要なものはこちら） |
 | 使わないドメイン | `bluemoment.studio`（プロジェクトWeb用。個人のサービス登録に使わない。[domains.md](domains.md)） |
 | 旧Gmail | 移行完了まで転送で受信、新規登録には使わない |
