@@ -44,7 +44,7 @@
 ## 3. Googleアカウント一覧（現状）
 | アカウント（識別名） | 用途 | 状態 | 統合先 / 対応 |
 |---|---|---|---|
-| main（`bl5e44j@gmail.com`） | 主。Android/Play Console、Tier 0 のログイン/リカバリー用メール | 存続（メールは整理） | 過去メールは Easy Switch で Proton へ取込→Gmail側は削除して軽量化。Easy Switch の転送は恒久 |
+| main（`bl5e44j@gmail.com`） | 主。Android/Play Console、Tier 0 のログイン/リカバリー用メール | 存続 | **転送・取込はしない**（2026-11-15）。役割＝Google/Android＋インフラ系ログイン（`+infra`）＋過去メール書庫。一般サービスは個別に Proton へ移す |
 | bm20（`bluemoment20@gmail.com`） | 用途TBD（Cloudflare は移行済） | **削除予定** | Easy Switch で転送（設定済） → 全サービス変更 → 転送ラベルに3か月来なければ §4 チェック後に削除 |
 | （例）sub-old | 旧用途 | 統合予定 | main へデータ移行後削除 |
 

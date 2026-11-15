@@ -127,7 +127,7 @@
 | 順 | アカウント | 転送先 | 過去メール | 最終形 |
 |---|---|---|---|---|
 | 1 | bm20（`bluemoment20@gmail.com`） | **Easy Switch の転送で設定済（2026-11-14）**。転送メールには Easy Switch が自動でラベルを付ける → これを `未移行` リストとして使う | Easy Switch で取込 | **アカウント削除** |
-| 2 | main（`bl5e44j@gmail.com`） | Easy Switch の転送（恒久） | **Easy Switch で取込**（Promotions/Social/Spam除外）→ Gmail側削除 | アカウント存続・Gmailは空に近く |
+| 2 | main（`bl5e44j@gmail.com`） | **転送しない**（2026-11-15 決定。`+infra` 宛まで Proton に流れると循環依存になるため） | **取込しない**（量が多い・重要物あり。Gmail を書庫として残す） | アカウント存続。役割＝Google/Android＋インフラ系ログイン（`+infra`）＋過去メール書庫。一般サービスは P3 で個別に Proton へ移し、自然に縮小させる |
 
 - 手動転送より Easy Switch（Settings → Import via Easy Switch → Google）を優先。OAuthで転送設定・取込・ラベル付けまで自動。
 
