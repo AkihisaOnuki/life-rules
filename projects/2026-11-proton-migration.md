@@ -55,7 +55,7 @@
 
 - [x] ドメイン取得: `bluemoment.fyi`（Cloudflare Registrar）
 - [x] Cloudflare で `bluemoment.fyi` の **Auto Renew ON** を確認（Domain Registration → Manage）
-- [ ] Cloudflare アカウントの2FA（TOTP or セキュリティキー）とバックアップコード保管を確認
+- [x] Cloudflare アカウントの2FA: セキュリティキー（YubiKey / Bitwarden / Windows Hello）登録済、リカバリーコード印刷済（2026-11-15）
 - [x] Cloudflare のログインメールは `bl5e44j+dev@gmail.com`（変更済）。
 - [ ] （後回しOK）Cloudflare のログインメールを `bl5e44j+infra@gmail.com` に変更
 - [ ] **Cloudflare のログイン以外のメール** を `bl5e44j+infra@gmail.com` に変更（2026-11-14 発覚: 領収書が bm20 に届いた）
@@ -67,7 +67,7 @@
   - WHOIS は Cloudflare により秘匿（REDACTED）済み＝正常
   - [x] Notifications: アラート未使用のため対応不要
   - **`@bluemoment.fyi` には絶対にしない**（循環依存: ドメイン死亡→Cloudflareに入れない→復旧不能）
-- [ ] 同じ理由で、Proton のリカバリー用メールも `@bluemoment.fyi` 以外（メインGoogle の Gmail）にする
+- [x] Proton のリカバリー用メール: `bl5e44j+infra@gmail.com`（2026-11-15）
 - [ ] **予備 YubiKey を購入**（推奨: Security Key C NFC＝FIDO2専用で安価、または 5C NFC＝TOTP/PIVも使う場合。Android でNFCが使えるNFC版を選ぶ。購入は Yubico 公式 or 正規代理店）。届いたら Tier 0（Bitwarden / Proton / Cloudflare / メインGoogle）に2本とも登録。Proton は届いてから2FA登録すると1回で済む
 - [ ] 支払いカードの有効期限をカレンダー登録（自動更新失敗＝メール全滅の最大要因）
 - [ ] （任意）`.fyi` は新しめのgTLD。まれにアドレス入力欄の検証で弾くサービスがある → 発生したら台帳に記録し `@proton.me` を使う
