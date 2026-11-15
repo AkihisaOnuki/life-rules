@@ -23,8 +23,9 @@
 | TXT | `@` | `v=spf1 -all` |
 | TXT | `_dmarc` | `v=DMARC1; p=reject;` |
 
-- `bluemoment.studio` が該当（2026-11-14 時点で送受信予定なし）。
+- 該当ドメイン: なし（2026-11-16 時点）。
 
 ## 4. プロジェクト用の連絡先が必要になったら
-- 受信のみ: Cloudflare Email Routing で `contact@bluemoment.studio` → `akihisa.onuki@bluemoment.fyi` に転送（無料）。§3 の Null MX は外し、SPF/DMARCは Email Routing の指示に合わせる。
+- 受信のみ: Cloudflare Email Routing で転送（無料）。SPF は Email Routing が自動追加するもの1行、DMARC は送信しないなら `p=reject`。
+  - **`bluemoment.studio` は既にこの構成**（Email Routing → `bl5e44j+dev@gmail.com`、2026-11-16 確認）。プロジェクトの連絡先は開発系として `+dev` で受ける。
 - 送信も必要: Proton Unlimited（独自ドメイン3つ）に上げて Proton に追加。

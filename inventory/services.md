@@ -10,6 +10,15 @@
 | Claude (claude.ai) | dev | `bluemoment20@gmail.com`（**メール変更不可**: 公式に未対応 2026-11-15 確認） | TBD | TBD | 移行中 | 2026-11-15 | 新アカウントへ移行予定（[projects/2026-11-claude-account-migration.md](../projects/2026-11-claude-account-migration.md)） |
 | GitHub | dev | `bl5e44j+dev@gmail.com`（据え置き。開発基盤のため独自ドメインに依存させない） | パスキー（Bitwarden/YubiKey） | 無料 | 利用中 | 2026-11-15 | このリポジトリ（AkihisaOnuki/life-rules） |
 | ジブラルタ生命 | finance | `gibraltar@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-15 | 2026-11-15 メール変更済 |
+| Microsoft アカウント | infra | `bl5e44j@gmail.com`（据え置き推奨: 独自ドメイン非依存で既に条件を満たす） | TBD | - | 利用中 | 2026-11-16 | Windows ログイン / Windows Hello。パスキー・YubiKey 追加とリカバリー確認が未 |
+| povo2.0 | infra | `bl5e44j` 系のどれか（要確認） | TBD | TBD | 利用中 | 2026-11-16 | SMS 受け口。独自ドメイン非依存のまま（`+infra` 推奨） |
+| 八十二銀行 | finance | bm20 or bl5e44j（要確認） → `hachijuni@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
+| Olive（三井住友銀行） | finance | bm20 or bl5e44j（要確認） → `smbc@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | カード一体型 |
+| 住信SBIネット銀行 | finance | bm20 or bl5e44j（要確認） → `sbi-bank@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
+| SBI証券 | finance | bm20 or bl5e44j（要確認） → `sbi-sec@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | NISA |
+| りそな銀行 | finance | bm20 or bl5e44j（要確認） → `resona@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
+| クレジットカード（各社） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | 一覧未把握。口座の引き落とし明細・Gmail「ご利用明細」検索で洗い出す |
+| 保険（ジブラルタ以外） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | |
 | Amazon | shop | `amazon@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-15 | 2026-11-15 メール変更済 |
 
 - 状態: `利用中` / `移行中`（旧メール→新メール） / `解約予定` / `解約済`
