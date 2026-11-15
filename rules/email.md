@@ -18,9 +18,8 @@
 
 ## 2. アドレスの決め方
 - 書式: **`<サービス名>@bluemoment.fyi`**（プレフィックス無し。2026-11-15 変更、[決定記録](../decisions/2026-11-15-email-no-prefix.md)）
-  - 例: `gibraltar@bluemoment.fyi`, `sbi@bluemoment.fyi`, `rakuten-bank@bluemoment.fyi`
+  - 例: `amazon@bluemoment.fyi`, `gibraltar@bluemoment.fyi`, `sbi@bluemoment.fyi`, `rakuten-bank@bluemoment.fyi`
   - サービス名は小文字・kebab-case。短く、そのサービスと一目で分かる名前にする。
-  - 例外（変更前に作成済）: `shop-amazon@bluemoment.fyi` はそのまま使う（再変更しない）。
 - カテゴリ（`finance`, `shop` 等）はアドレスに入れず、台帳の「カテゴリ」列と Proton のラベルで管理する。
 - **1サービス1アドレス**。漏洩・スパム発生時はそのアドレスだけ無効化する。
 - 人に教えるアドレスは `akihisa.onuki@bluemoment.fyi` に限定する（catch-all 宛先を兼ねる）。
