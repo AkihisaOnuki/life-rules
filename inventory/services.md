@@ -18,7 +18,8 @@
 | SBI証券 | finance | bm20 or bl5e44j（要確認） → `sbi-sec@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | NISA |
 | りそな銀行 | finance | bm20 or bl5e44j（要確認） → `resona@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
 | クレジットカード（各社） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | 一覧未把握。口座の引き落とし明細・Gmail「ご利用明細」検索で洗い出す |
-| 保険（ジブラルタ以外） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | |
+| ソニー損保 | finance | `sonysonpo@bluemoment.fyi` | PW+パスキー（Bitwarden） | TBD | 利用中 | 2026-11-18 | 2026-11-18 メール変更済 |
+| 保険（ジブラルタ・ソニー損保以外） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | |
 | ConoHa | dev | `conoha@bluemoment.fyi` | PW+TOTP/パスキー（Bitwarden） | VPS 契約は 2027-02 で終了予定 | 利用中（アカウント維持） | 2026-11-18 | 本番インフラは置いていないため独自ドメインで可。本番用途に使う場合は `+dev` へ変更 |
 | Amazon | shop | `amazon@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-15 | 2026-11-15 メール変更済 |
 

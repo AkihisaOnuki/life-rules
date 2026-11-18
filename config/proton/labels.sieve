@@ -26,13 +26,19 @@ if allof (address :is ["to", "cc"] "conoha@bluemoment.fyi",
     fileinto "漏洩疑い";
 }
 
+if allof (address :is ["to", "cc"] "sonysonpo@bluemoment.fyi",
+          not address :domain :matches "from" ["sonysonpo.co.jp", "*.sonysonpo.co.jp"]) {
+    fileinto "漏洩疑い";
+}
+
 # 銀行・証券等は、移行完了後に実際のアドレスと差出人ドメインを確認してから追加する
 
 # ============ カテゴリ別ラベル ============
 # --- Finance（銀行・証券・カード・保険） ---
 # 移行済みのアドレスだけを書く（予定アドレスは移行完了後に追加）
 if address :is ["to", "cc"] [
-    "gibraltar@bluemoment.fyi"
+    "gibraltar@bluemoment.fyi",
+    "sonysonpo@bluemoment.fyi"
 ] {
     fileinto "Finance";
 }
