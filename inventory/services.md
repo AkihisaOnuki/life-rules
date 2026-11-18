@@ -13,7 +13,7 @@
 | Microsoft アカウント | infra | `bl5e44j@gmail.com`（据え置き推奨: 独自ドメイン非依存で既に条件を満たす） | TBD | - | 利用中 | 2026-11-16 | Windows ログイン / Windows Hello。パスキー・YubiKey 追加とリカバリー確認が未 |
 | povo2.0 | infra | `bl5e44j` 系のどれか（要確認） | TBD | TBD | 利用中 | 2026-11-16 | SMS 受け口。独自ドメイン非依存のまま（`+infra` 推奨） |
 | 八十二銀行 | finance | bm20 or bl5e44j（要確認） → `hachijuni@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
-| Olive（三井住友銀行） | finance | bm20 or bl5e44j（要確認） → `smbc@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | カード一体型 |
+| Olive（三井住友銀行） | finance | `smbc@bluemoment.fyi` | TBD | - | 利用中 | 2026-11-18 | 2026-11-18 メール変更済。カード一体型（Vpass） |
 | 住信SBIネット銀行 | finance | bm20 or bl5e44j（要確認） → `sbi-bank@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
 | SBI証券 | finance | bm20 or bl5e44j（要確認） → `sbi-sec@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | NISA |
 | りそな銀行 | finance | bm20 or bl5e44j（要確認） → `resona@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
