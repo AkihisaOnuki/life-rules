@@ -21,6 +21,11 @@ if allof (address :is ["to", "cc"] "gibraltar@bluemoment.fyi",
     fileinto "漏洩疑い";
 }
 
+if allof (address :is ["to", "cc"] "conoha@bluemoment.fyi",
+          not address :domain :matches "from" ["conoha.jp", "*.conoha.jp"]) {
+    fileinto "漏洩疑い";
+}
+
 # 銀行・証券等は、移行完了後に実際のアドレスと差出人ドメインを確認してから追加する
 
 # ============ カテゴリ別ラベル ============
