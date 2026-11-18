@@ -21,22 +21,13 @@ if allof (address :is ["to", "cc"] "gibraltar@bluemoment.fyi",
     fileinto "漏洩疑い";
 }
 
-# TODO: 以下は移行後、実際の差出人ドメインを確認してから有効化する
-# hachijuni@  -> ?
-# smbc@       -> ?
-# sbi-bank@   -> ?
-# sbi-sec@    -> ?
-# resona@     -> ?
+# 銀行・証券等は、移行完了後に実際のアドレスと差出人ドメインを確認してから追加する
 
 # ============ カテゴリ別ラベル ============
 # --- Finance（銀行・証券・カード・保険） ---
+# 移行済みのアドレスだけを書く（予定アドレスは移行完了後に追加）
 if address :is ["to", "cc"] [
-    "gibraltar@bluemoment.fyi",
-    "hachijuni@bluemoment.fyi",
-    "smbc@bluemoment.fyi",
-    "sbi-bank@bluemoment.fyi",
-    "sbi-sec@bluemoment.fyi",
-    "resona@bluemoment.fyi"
+    "gibraltar@bluemoment.fyi"
 ] {
     fileinto "Finance";
 }
