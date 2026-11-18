@@ -25,6 +25,9 @@
 - 人に教えるアドレスは `akihisa.onuki@bluemoment.fyi` に限定する（catch-all 宛先を兼ねる）。
 - 使い捨ては `temp-<YYYYMM>-<用途>@bluemoment.fyi`。
 
+## 2.4 副アドレス
+- メールを2つ登録できる重要サービスは、副に `bl5e44j+life@gmail.com` を入れる（[accounts.md §2.1](accounts.md)）。
+
 ## 2.5 独自ドメインを使わないもの
 - Tier 0・インフラ・開発基盤は `bluemoment.fyi` を使わず、メインGmailの `+infra` / `+dev` を使う（[accounts.md §2.1](accounts.md)）。
   - 理由: ドメイン失効・Proton 障害時でも復旧経路を残すため。
