@@ -19,6 +19,7 @@
 | りそな銀行 | finance | bm20 or bl5e44j（要確認） → `resona@bluemoment.fyi` | TBD | - | 移行予定 | 2026-11-16 | |
 | クレジットカード（各社） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | 一覧未把握。口座の引き落とし明細・Gmail「ご利用明細」検索で洗い出す |
 | 保険（ジブラルタ以外） | finance | 多くは bm20（推定） | TBD | - | 棚卸し待ち | 2026-11-16 | |
+| ConoHa | dev | `conoha@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-18 | 2026-11-18 登録。用途TBD（VPS等なら規則上は `+dev` 対象 → 要判断） |
 | Amazon | shop | `amazon@bluemoment.fyi` | TBD | TBD | 利用中 | 2026-11-15 | 2026-11-15 メール変更済 |
 
 - 状態: `利用中` / `移行中`（旧メール→新メール） / `解約予定` / `解約済`
