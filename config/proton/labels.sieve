@@ -1,9 +1,34 @@
-# Proton Mail フィルタ（Sieve）— カテゴリ別ラベル付け
+# Proton Mail フィルタ（Sieve）— カテゴリ別ラベル ＋ 漏洩検知
 # 正本: このファイル。Proton → 設定 → フィルタ → 「Sieve フィルタを追加」に全文を貼る。
-# 更新: inventory/email-aliases.md に finance/family のアドレスを追加したら、ここにも追記して貼り直す（Claude が更新する）。
-# ラベル名は Proton 側に先に作っておくこと: Finance, Family
+# 更新: inventory/email-aliases.md の「想定差出人ドメイン」を更新したら、ここにも反映して貼り直す（Claude が更新する）。
+# 事前に Proton でラベルを作成: Finance, Family, 漏洩疑い
+#
+# 考え方: 漏洩 = 「宛先アドレス」と「差出人ドメイン」の組み合わせが想定外であること。
+#   宛先 smbc@ に smbc.co.jp 以外から届いた → そのアドレスが漏れた/売られた疑い。
+#   差出人だけ・宛先だけでは判定できないので、両方を見る。
 require ["fileinto", "imap4flags"];
 
+# ============ 漏洩検知（宛先ごとに想定差出人を定義） ============
+# 1アドレス=1ブロック。想定ドメインは実際に届いたメールで確認して追記する（サブドメイン含めるなら "*.example.co.jp"）。
+
+if allof (address :is ["to", "cc"] "amazon@bluemoment.fyi",
+          not address :domain :matches "from" ["amazon.co.jp", "*.amazon.co.jp", "amazon.com", "*.amazon.com"]) {
+    fileinto "漏洩疑い";
+}
+
+if allof (address :is ["to", "cc"] "gibraltar@bluemoment.fyi",
+          not address :domain :matches "from" ["gib-life.co.jp", "*.gib-life.co.jp"]) {
+    fileinto "漏洩疑い";
+}
+
+# TODO: 以下は移行後、実際の差出人ドメインを確認してから有効化する
+# hachijuni@  -> ?
+# smbc@       -> ?
+# sbi-bank@   -> ?
+# sbi-sec@    -> ?
+# resona@     -> ?
+
+# ============ カテゴリ別ラベル ============
 # --- Finance（銀行・証券・カード・保険） ---
 if address :is ["to", "cc"] [
     "gibraltar@bluemoment.fyi",

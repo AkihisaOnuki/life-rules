@@ -43,6 +43,7 @@
 - カテゴリ単位でラベル（`finance`, `shop` …、[00-principles.md §3](00-principles.md)）を作る。
 - **サービス単位のラベルは作らない**。アドレス自体が索引なので `to:amazon@bluemoment.fyi` で検索する。
 - ラベルは重要カテゴリのみ: `Finance`（銀行・証券・カード・保険）、`Family`（保育園・行政・家族）。
+- **漏洩検知**: 宛先アドレスごとに想定差出人ドメインを定義し、想定外の差出人なら `漏洩疑い` ラベル。台帳 [inventory/email-aliases.md](../inventory/email-aliases.md) の「想定差出人ドメイン」列が正。漏洩確定したらそのアドレスを遮断（§4.5）し、サービス側のアドレスを変更。
 - 振り分けは Sieve で管理し、正本は [config/proton/labels.sieve](../config/proton/labels.sieve)。finance/family のアドレスを追加したら Claude が更新 → Proton に貼り直す。
 
 ## 4.5 遮断
