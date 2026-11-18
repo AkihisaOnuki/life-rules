@@ -36,6 +36,11 @@ if allof (address :is ["to", "cc"] "smbc@bluemoment.fyi",
     fileinto "漏洩疑い";
 }
 
+if allof (address :is ["to", "cc"] "mynaportal@bluemoment.fyi",
+          not address :domain :matches "from" ["myna.go.jp", "*.myna.go.jp"]) {
+    fileinto "漏洩疑い";
+}
+
 # 銀行・証券等は、移行完了後に実際のアドレスと差出人ドメインを確認してから追加する
 
 # ============ カテゴリ別ラベル ============
@@ -50,8 +55,8 @@ if address :is ["to", "cc"] [
 }
 
 # --- Family（保育園・行政・家族） ---
-# if address :is ["to", "cc"] [
-#     "xxx@bluemoment.fyi"
-# ] {
-#     fileinto "Family";
-# }
+if address :is ["to", "cc"] [
+    "mynaportal@bluemoment.fyi"
+] {
+    fileinto "Family";
+}
