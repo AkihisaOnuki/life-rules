@@ -35,6 +35,7 @@
 
 ## 3. 新規登録時の手順
 1. §2 の書式でアドレスを決める。
+1.5 finance/family 等ラベル対象なら、**サービス側で変更する前に** Claude に [config/proton/labels.sieve](../config/proton/labels.sieve) へ追加させ、Proton に貼り替える（最初の確認メールから振り分けるため）。既存メールは `to:<アドレス>` 検索 → 全選択 → ラベル付与で手動対応。
 2. catch-all なので Proton 側の作成は不要。**そのアドレスから送信/返信が必要な場合のみ** Proton でアドレスを個別作成。
 3. パスワードマネージャに登録（アカウント名にアドレスを使う）。
 4. [inventory/email-aliases.md](../inventory/email-aliases.md) と [inventory/services.md](../inventory/services.md) に追記。
